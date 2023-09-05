@@ -59,3 +59,7 @@ Transliterate Names is licensed under the MIT License. Please see the [LICENSE](
 ## Issues
 
 If you encounter any bugs or have feature requests, please [open an issue](https://github.com/ApoorvTyagi/english-transliterate/issues) on GitHub. We welcome your feedback and contributions!
+
+---
+
+### Made with ❤️ in Pune for Bajaj Finserv Health!
