@@ -20,7 +20,8 @@
     "translate",
     "name translate",
     "express",
-    "translate api"
+    "translate api",
+    "internationalization"
   ],
   "author": "apoorvtyagi",
   "license": "MIT",
