@@ -4,7 +4,7 @@ english-transliterate is an npm library that helps you convert non-English names
 
 ## Installation
 
-You can easily install Transliterate Names using npm:
+You can install package using npm:
 
 ```bash
 npm i english-transliterate
@@ -12,7 +12,7 @@ npm i english-transliterate
 
 ## Usage
 
-To use Transliterate Names in your project, follow these simple steps:
+To use english-transliterate in your project, follow these simple steps:
 
 1. Import the library into your JavaScript/TypeScript file:
 
@@ -31,7 +31,7 @@ console.log(transliteratedName); // Outputs: "Apoorva"
 
 ## Supported Languages
 
-Transliterate Names currently supports transliteration for a wide range of languages, including but not limited to:
+english-transliterate currently supports transliteration for a wide range of languages, including but not limited to:
 
 - Chinese
 - Japanese
@@ -40,7 +40,7 @@ Transliterate Names currently supports transliteration for a wide range of langu
 - Greek
 - Hindi
 - Korean
-- Thai
+- French
 - And many more...
 
 ## Contributing
@@ -54,7 +54,7 @@ If you'd like to contribute to this project, please follow these steps:
 
 ## License
 
-Transliterate Names is licensed under the MIT License. Please see the [LICENSE](https://github.com/ApoorvTyagi/english-transliterate/blob/main/LICENSE) file for more details.
+english-transliterate is licensed under the MIT License. Please see the [LICENSE](https://github.com/ApoorvTyagi/english-transliterate/blob/main/LICENSE) file for more details.
 
 ## Issues
 
