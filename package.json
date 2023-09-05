@@ -1,6 +1,6 @@
 {
   "name": "english-transliterate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Transliterate non english names to english",
   "main": "./src/index.js",
   "scripts": {
