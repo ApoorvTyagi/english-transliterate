@@ -11,17 +11,24 @@
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/ApoorvTyagi/english-transliterate.git"
   },
-  "keywords": [],
+  "keywords": [
+    "transliterate",
+    "english transliterate",
+    "name transliterate",
+    "translate",
+    "name translate",
+    "express",
+    "translate api"
+  ],
   "author": "apoorvtyagi",
   "license": "MIT",
   "dependencies": {
     "@iamtraction/google-translate": "^2.0.1",
     "unidecode": "^0.1.8"
   },
-  "engineStrict": true,
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=12.0.0"
   }
 }
