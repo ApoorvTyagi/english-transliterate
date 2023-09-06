@@ -62,4 +62,4 @@ If you encounter any bugs or have feature requests, please [open an issue](https
 
 ---
 
-### Made with ❤️ in Pune for Bajaj Finserv Health!
+### Made with ❤️ in Pune for Bajaj Health!
