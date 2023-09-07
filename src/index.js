@@ -1,5 +1,6 @@
 const { translateNameToEnglish } = require('./vernacular');
 
 module.exports = async function translate (text) {
-    return translateNameToEnglish(text);
+    const translatedName =  await translateNameToEnglish(text);
+    return translatedName.toLowerCase();
 }

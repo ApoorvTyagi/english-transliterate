@@ -4,8 +4,8 @@ const unidecode = require('unidecode');
 /**
  *
  * @param {String} localName
- * @description Generates text for google (shorter statement context for short names)
- * @returns {String} returns text to translate based on localName length
+ * @description Generates text for google (shorter statement context for short names) based on localName length
+ * @returns {String} returns text to translate
  */
 function getGoogleTranslateText(localName) {
   /*
@@ -25,7 +25,7 @@ function getGoogleTranslateText(localName) {
  * @description Give ALMOST transliterated name
  * @returns {String} returns converted transliterated name from local language
  */
-function transliterate(localName, googleTranslatedName, unicodeString) {
+function transliterate(localName, googleTranslatedName) {
   const decodedName = unidecode(localName);
   if (
     decodedName &&
@@ -34,32 +34,31 @@ function transliterate(localName, googleTranslatedName, unicodeString) {
   ) {
     return decodedName;
   }
-  // If name fails to get translated, return unicode over local str for HTTP header
   return googleTranslatedName === localName
-    ? unicodeString
+    ? localName
     : googleTranslatedName;
 }
 
 /**
  *
- * @param {String} str
+ * @param {String} Input non english string
  * @description translates non-english string to English
  * @returns {String} returns translated string
  */
-async function translateNameToEnglish(str) {
-  if (!str || str.match(/^[a-zA-Z ]+$/i)) {
-    return str;
+async function translateNameToEnglish(localName) {
+  if (!localName || localName.match(/^[a-zA-Z ]+$/i)) {
+    // If name already in english just return
+    return localName;
   }
-  const localName = str;
   try {
     const res = await translate(getGoogleTranslateText(localName), {
       to: 'en',
     });
     const translatedName = res.text.split(':')[1].trim();
-    return transliterate(localName, translatedName, str);
+    return transliterate(localName, translatedName);
   } catch (err) {}
-  // In case of error, Returning unicode str over original so token name doesn't break in HTTP headers
-  return str;
+  // In case of error, Returning orignal string
+  return localName;
 }
 
 module.exports = { translateNameToEnglish };
