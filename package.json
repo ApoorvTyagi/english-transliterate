@@ -4,6 +4,7 @@
   "description": "Transliterate non english names to english",
   "main": "./src/index.js",
   "scripts": {
+    "postinstall": "husky install",
     "test": "mocha tests/index.js --timeout 300000 --recursive --exit"
   },
   "files": [
