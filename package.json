@@ -26,12 +26,6 @@
   ],
   "author": "apoorvtyagi",
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test",
-      "pre-push": "npm version patch"
-    }
-  },
   "dependencies": {
     "@iamtraction/google-translate": "^2.0.1",
     "unidecode": "^0.1.8"
