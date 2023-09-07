@@ -26,7 +26,7 @@ const translate = require('english-transliterate');
 const name = "अपूर्व "; // Non-English name, e.g., in Hindi (Devnagiri)
 const transliteratedName = translate(name);
 
-console.log(transliteratedName); // Outputs: "Apoorva"
+console.log(transliteratedName); // Outputs: "apoorva"
 ```
 
 ## Supported Languages
