@@ -1,6 +1,6 @@
 # english-transliterate
 
-english-transliterate is an npm library that helps you convert non-English names into English names. It is particularly useful when dealing with internationalization and localization of applications, ensuring that names from different languages can be represented consistently in English characters.
+english-transliterate is an npm library that helps you convert non-English names into English names. It is particularly useful when dealing with the internationalization and localization of applications, ensuring that names from different languages can be represented consistently in English characters.
 
 ## Installation
 
@@ -60,6 +60,3 @@ english-transliterate is licensed under the MIT License. Please see the [LICENSE
 
 If you encounter any bugs or have feature requests, please [open an issue](https://github.com/ApoorvTyagi/english-transliterate/issues) on GitHub. We welcome your feedback and contributions!
 
----
-
-### Made with ❤️ in Pune for Bajaj Health!
