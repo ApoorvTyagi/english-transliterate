@@ -1,6 +1,6 @@
 const translate = require('@iamtraction/google-translate');
 const unidecode = require('unidecode');
-
+const { isAlmostEqualStrings } = require('./levenshtein');
 /**
  *
  * @param {String} localName
@@ -30,13 +30,12 @@ function transliterate(localName, googleTranslatedName) {
   if (
     decodedName &&
     Array.from(decodedName)[0]?.toLowerCase() !==
-      Array.from(googleTranslatedName)[0]?.toLowerCase()
+      Array.from(googleTranslatedName)[0]?.toLowerCase() &&
+    !isAlmostEqualStrings(decodedName, googleTranslatedName)
   ) {
     return decodedName;
   }
-  return googleTranslatedName === localName
-    ? localName
-    : googleTranslatedName;
+  return googleTranslatedName === localName ? localName : googleTranslatedName;
 }
 
 /**
