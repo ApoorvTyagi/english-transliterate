@@ -1,3 +1,10 @@
+/**
+ *
+ * @param {String} first string
+ * @param {String} second string
+ * @description applies levenshtein algorithm on first and second string
+ * @returns {Integer} returns levenshtein distance
+ */
 function levenshteinDistance(first_str, second_str) {
   if (first_str.length === 0) {
     return second_str.length;
@@ -36,21 +43,29 @@ function levenshteinDistance(first_str, second_str) {
   return matrix[first_str.length][second_str.length];
 }
 
+/**
+ *
+ * @param {String} first string
+ * @param {String} second string
+ * @description Finds how common first and second strings are based on value from 0 to 1
+ * @returns {Boolean} returns true if value is greater than LEVENSHTEIN_THRESHOLD
+ */
 function isAlmostEqualStrings(first_str, second_str) {
+  let LEVENSHTEIN_THRESHOLD = 0.8;
+
   if (first_str === second_str) {
     return true;
   }
 
-  if (first_str.length < 2 || second_str.length < 2) {
-    /* for 0-letter or 1-letter strings => Never able to compare them! */
-    return false;
+  if (Math.min(first_str.length, second_str.length) < 5) {
+    /* For small names, keeping the threshold low */
+    LEVENSHTEIN_THRESHOLD = 0.5;
   }
 
   const distance = levenshteinDistance(first_str, second_str);
-  const percentage =
-    1 - distance / Math.max(first_str.length, second_str.length);
+  const value = 1 - distance / Math.max(first_str.length, second_str.length);
 
-  return percentage > 0.8;
+  return value > LEVENSHTEIN_THRESHOLD;
 }
 
 module.exports = { isAlmostEqualStrings, levenshteinDistance };

@@ -22,8 +22,9 @@ function getGoogleTranslateText(localName) {
 /**
  *
  * @param {String} localName
- * @description Give ALMOST transliterated name
- * @returns {String} returns converted transliterated name from local language
+ * @param {String} googleTranslatedName
+ * @description Give ALMOST transliterated name using levenshtein distance algorithm
+ * @returns {String} returns transliterated name
  */
 function transliterate(localName, googleTranslatedName) {
   const decodedName = unidecode(localName);
@@ -40,7 +41,7 @@ function transliterate(localName, googleTranslatedName) {
 
 /**
  *
- * @param {String} Input non english string
+ * @param {String} non-english string
  * @description translates non-english string to English
  * @returns {String} returns translated string
  */
